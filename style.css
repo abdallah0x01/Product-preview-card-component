@@ -1,0 +1,160 @@
+:root {
+  --color-green: #3d8168;
+  --color-green-light: rgb(64, 163, 125);
+
+  --color-black: #222;
+  --color-grey-light: #777;
+  --color-pink: #f3eae3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-pink);
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 40rem;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 500px) {
+    width: 30rem;
+
+    flex-direction: column;
+  }
+}
+
+.perfume-image-container {
+  width: 50%;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-size: cover;
+  background-position: 50% 45%;
+
+  @media only screen and (max-width: 500px) {
+    height: 21rem;
+    width: 100%;
+
+    background-image: url(./images/image-product-mobile.jpg);
+    background-position: top;
+  }
+}
+
+.perfume-image {
+  width: 100%;
+
+  /* border-radius: 10px 0 0 10px; */
+
+  /* @media only screen and (max-width:500px){ */
+  /* border-radius: 10px 0 0 10px; */
+
+  /* width: 100%;
+      } */
+}
+
+.description {
+  width: 50%;
+
+  padding: 1.5rem;
+
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+}
+
+.category {
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-grey-light);
+  letter-spacing: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 2.5rem;
+  /* padding: .5rem; */
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  color: var(--color-grey-light);
+  font-family: "Roboto", serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-family: "Fraunces", serif;
+  /* justify-content: space-around; */
+}
+
+.price__actual {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-right: 2rem;
+  color: var(--color-green);
+  font-weight: 800;
+  @media only screen and (max-width: 500px) {
+    font-size: 3rem;
+  }
+}
+
+.price__before {
+  text-decoration: line-through;
+  color: var(--color-grey-light);
+  @media only screen and (max-width: 500px) {
+    font-size: 1.2rem;
+  }
+}
+
+.cart-btn:link,
+.cart-btn:visited {
+  display: block;
+  text-decoration: none;
+  background-color: var(--color-green);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  margin-top: 1rem;
+  transition: all 0.2s;
+}
+
+.cart-btn:hover {
+  background-color: var(--color-green-light);
+}
+
+.cart-image {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff;
+  margin-right: 1rem;
+}
